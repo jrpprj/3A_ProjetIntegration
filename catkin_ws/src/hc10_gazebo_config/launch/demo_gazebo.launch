@@ -14,7 +14,10 @@
   </include>
   
   <!-- ROS NODE TF -->
-
+  <node pkg="robot_state_publisher" type="robot_state_publisher" name="rob_st_pb"/>
+  <node pkg="tf" type="static_transform_publisher" name="camera_joint_publisher" args="0 -0.05 0.05 0 0 0 tool0 camera_depth_frame 100" />
+  <node pkg="tf" type="static_transform_publisher" name="camera_absolutePos_publisher" args="0 0 0 0 0 0 world base_link 100" />
+  
   <include file="$(dirname)/demo.launch" pass_all_args="true">
     <!-- robot description is loaded by gazebo.launch, to enable Gazebo features -->
     <arg name="load_robot_description" value="false" />

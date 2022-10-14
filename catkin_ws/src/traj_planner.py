@@ -200,17 +200,17 @@ display_trajectory_publisher.publish(display_trajectory)
 
 execute_correct = move_group.execute(plan, wait=True)
 print("execute", execute_correct)
-if (execute_correct != True):
-    print("! Box in the planning trajectory !")
-    plan, fraction = cartesianPath(scale=1.0)
+#if (execute_correct != True):
+#    print("! Box in the planning trajectory !")
+#    plan, fraction = cartesianPath(scale=1.0)
     
-    display_trajectory = moveit_msgs.msg.DisplayTrajectory()
-    display_trajectory.trajectory_start = robot.get_current_state()
-    display_trajectory.trajectory.append(plan)
+#    display_trajectory = moveit_msgs.msg.DisplayTrajectory()
+#    display_trajectory.trajectory_start = robot.get_current_state()
+#    display_trajectory.trajectory.append(plan)
 
-    display_trajectory_publisher.publish(display_trajectory)
+#    display_trajectory_publisher.publish(display_trajectory)
 
-    execute_correct = move_group.execute(plan, wait=True)
+#    execute_correct = move_group.execute(plan, wait=True)
 
 #scene.remove_attached_object(planning_frame, name=box_name)
 #scene.remove_world_object(box_name)
