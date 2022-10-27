@@ -125,13 +125,24 @@ def obstacle(planning_frame, timeout = 10):
     box_pose = geometry_msgs.msg.PoseStamped()
     box_pose.header.frame_id = "world"
     box_pose.pose.orientation.w = 1.0
-    box_pose.pose.position.y = 0.52  # above the panda_hand frame
+    box_pose.pose.position.x = 0.25
+    box_pose.pose.position.y = 0.3
+    box_pose.pose.position.z = 0.15
     box_name = "CHIPPIE"
-    scene.add_box(box_name, box_pose, size=(0.3, 0.3, 0.3))
+    scene.add_box(box_name, box_pose, size=(0.2, 0.2, 0.3))
+    box_pose_ = geometry_msgs.msg.PoseStamped()
+    box_pose_.header.frame_id = "world"
+    box_pose_.pose.orientation.w = 1.0
+    box_pose.pose.position.x = -0.25
+    box_pose.pose.position.y = 0.3
+    box_pose.pose.position.z = 0.15
+    box_name_ = "CHIPPIE_VADER"
+    scene.add_box(box_name_, box_pose_, size=(0.2, 0.2, 0.3))
     
     #grasping_group = "hc10_arm"
     #touch_links = robot.get_link_names(group=grasping_group)
     scene.attach_box(planning_frame, box_name)
+    scene.attach_box(planning_frame, box_name_)
 
     start = rospy.get_time()
     seconds = rospy.get_time()
