@@ -3,7 +3,7 @@ Projet d'intégration 3A sur hc10
 
 # Cloner le git
 
-<em>git clone https://github.com/jrpprj/3A_ProjetIntegration.git</em>  
+> <em>git clone https://github.com/jrpprj/3A_ProjetIntegration.git</em>  
 
 # Fichiers urdf (xacro)
 
@@ -23,21 +23,24 @@ Et pour bouger les fichiers urdf dans le bon répértoire, faire :
 # Lancer la demo Rviz depuis le terminal ainsi que le script python une fois avoir suivi le document pdf explicatif
 
 Terminal 1 :  
-<em>(n'importe quel chemin)$ . /opt/ros/noetic/setup.bash</em>  
-<em>(chemin)/catkin_ws$ catkin build</em>  
-<em>(chemin)/catkin_ws$ . devel/setup.bash</em>  
-<em>(chemin)/catkin_ws$ roslaunch hc10_moveit_config demo.launch</em>  
+  
+> <em>(n'importe quel chemin)$ . /opt/ros/noetic/setup.bash</em>  
+> <em>(chemin)/catkin_ws$ catkin build</em>  
+> <em>(chemin)/catkin_ws$ . devel/setup.bash</em>  
+> <em>(chemin)/catkin_ws$ roslaunch hc10_moveit_config demo.launch</em>  
 
 Terminal 2 :  
-<em>(n'importe quel chemin)$ . /opt/ros/noetic/setup.bash</em>  
-<em>(chemin)/catkin_ws$ . devel/setup.bash</em>  
-<em>(chemin)/catkin_ws$ cd src</em>  
-<em>(chemin)/catkin_ws/src$ python3 traj_planner.py</em>  
+  
+> <em>(n'importe quel chemin)$ . /opt/ros/noetic/setup.bash</em>  
+> <em>(chemin)/catkin_ws$ . devel/setup.bash</em>  
+> <em>(chemin)/catkin_ws$ cd src</em>  
+> <em>(chemin)/catkin_ws/src$ python3 traj_planner.py</em>  
 
 # Lancer la demo Gazebo depuis le terminal une fois avoir suivi le document pdf explicatif
 
 Terminal 1 :  
-<em>(n'importe quel chemin)$ . /opt/ros/noetic/setup.bash</em>  
-<em>(chemin)/catkin_ws$ catkin build</em>  
-<em>(chemin)/catkin_ws$ . devel/setup.bash</em>  
-<em>(chemin)/catkin_ws$ roslaunch hc10_gazebo_config demo_gazebo.launch</em>  
+  
+> <em>(n'importe quel chemin)$ . /opt/ros/noetic/setup.bash</em>  
+> <em>(chemin)/catkin_ws$ catkin build</em>  
+> <em>(chemin)/catkin_ws$ . devel/setup.bash</em>  
+> <em>(chemin)/catkin_ws$ roslaunch hc10_gazebo_config demo_gazebo.launch</em>  
